@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Examples {
     static Scanner scanner = new Scanner(System.in);
-
+    private static int mark = 0;
     public static void run(String[] args) {
         int[] a = {2, 3, 4, 5, 6, 7, 8, 9};
         int[] b = {2, 3, 4, 5, 6, 7, 8, 9};
@@ -15,43 +15,43 @@ public class Examples {
             switch (l++) {
                 case 1:
                     System.out.println("Задание номер 1: " + a[x] + " x " + a[y] + " = ");
-                    if (getNumb() == z){
+                    if (getNumb() == z) {
                         System.out.println("Верно!");
-                    }
-                    else
+                        mark++;
+                    } else
                         System.out.println("Не верно!");
 
                     break;
                 case 2:
                     System.out.println("Задание номер 2: " + a[x] + " x " + a[y] + " = ");
-                    if (getNumb() == z){
+                    if (getNumb() == z) {
                         System.out.println("Верно!");
-                    }
-                    else
+                        mark++;
+                    } else
                         System.out.println("Не верно!");
                     break;
                 case 3:
                     System.out.println("Задание номер 3: " + a[x] + " x " + a[y] + " = ");
-                    if (getNumb() == z){
+                    if (getNumb() == z) {
                         System.out.println("Верно!");
-                    }
-                    else
+                        mark++;
+                    } else
                         System.out.println("Не верно!");
                     break;
                 case 4:
                     System.out.println("Задание номер 4: " + a[x] + " x " + a[y] + " = ");
-                    if (getNumb() == z){
+                    if (getNumb() == z) {
                         System.out.println("Верно!");
-                    }
-                    else
+                        mark++;
+                    } else
                         System.out.println("Не верно!");
                     break;
                 case 5:
                     System.out.println("Задание номер 5: " + a[x] + " x " + a[y] + " = ");
-                    if (getNumb() == z){
+                    if (getNumb() == z) {
                         System.out.println("Верно!");
-                    }
-                    else
+                        mark++;
+                    } else
                         System.out.println("Не верно!");
                     break;
             }
@@ -69,8 +69,10 @@ public class Examples {
             numb = getNumb();
         }
         return numb;
+    }
 
-
+    public static void getMark(){
+        System.out.println("Your mark is: "+mark);
     }
 }
 

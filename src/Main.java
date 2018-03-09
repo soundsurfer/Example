@@ -8,6 +8,7 @@ public class Main extends Examples{
         String name = scanner.next();
         System.out.println("Очень приятно, " + name + ", и так, начнём тест:");
         Examples.run(args);
+        Examples.getMark();
         //TODO Создать оценочный класс который подсчитает количество правильных ответов и выведет их
     }
 
