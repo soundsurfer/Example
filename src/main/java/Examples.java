@@ -1,5 +1,3 @@
-import java.sql.SQLException;
-import java.sql.Statement;
 import java.util.Scanner;
 
 public class Examples {
@@ -59,7 +57,7 @@ public class Examples {
                     break;
             }
         }
-        createMark(name);
+        createMark(name, mark);
     }
 
     private static int getNumb() {
@@ -79,14 +77,8 @@ public class Examples {
         System.out.println("Your mark is: "+mark);
     }
 
-    private static void createMark(String name){
-        try {
-            Statement statement = DataBaseManager.getConnection().createStatement();
-            statement.execute(String.format("INSERT INTO MARKS (name,mark) VALUES ('%s',%d)",name,mark));
-        } catch (SQLException e) {
-            System.out.println("Can't create statement!!!");
-            e.printStackTrace();
-        }
+    private static void createMark(String name, int mark){
+       DataBaseManager.dataBaseCreate(name, mark);
     }
 }
 
